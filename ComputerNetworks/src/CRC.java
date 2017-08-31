@@ -96,3 +96,22 @@ public class CRC {
                     System.out.println("Data with error");
         }
 }
+/*
+Output 1:
+Computing cyclic redundancy
+Enter data of the Frame : 11001111101
+Enter the generating function : 1101
+Sender frame data = 11001111101010
+Enter recieved string is : 11001111101010
+Enter generating function : 1101
+Data with no error
+
+Output 2:
+Computing cyclic redundancy
+Enter data of the Frame : 11001111101
+Enter the generating function : 1101
+Sender frame data = 11001111101010
+Enter recieved string is : 11001111101011
+Enter generating function : 1101
+Data with error
+*/
