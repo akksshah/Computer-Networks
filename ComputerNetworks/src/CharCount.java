@@ -87,7 +87,7 @@ public class CharCount{
 			CharCount frame  = new CharCount(br.readLine());	
 			frameList.add(frame);		
 		}
-
+                
 		System.out.println("\nCHARACTER COUNT");
 		String sentString = CharCount.senderCharCount(frameList);
 		System.out.println("Sent String : "+sentString);

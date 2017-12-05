@@ -35,7 +35,7 @@ public class BitStuffing{
 		{
 			String frame = frameObj.frame;
 			String append = "01111110";
-			frame = frame.replaceAll("11111", "111110");
+			frame = frame.replaceAll("01111110", "011111010");
 			frame = append + frame + append;
 			sendString = sendString + frame;
 		}
@@ -80,8 +80,11 @@ public class BitStuffing{
 		String sentString = BitStuffing.senderBitStuff(frameList);
 		System.out.println("Sent String : "+sentString);
 		String receivedString = BitStuffing.receiverBitStuff(sentString);
-		System.out.println("Received String Framewsie : \n"+receivedString);
-	}
+		System.out.println("Received String Framewise : \n"+receivedString);
+                String abc = "hello$hello";
+                abc = abc.replaceAll("\\$","\\$\\$");
+                System.out.println(abc);
+        }
 }
 
 /*

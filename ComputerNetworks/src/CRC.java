@@ -46,6 +46,7 @@ public class CRC {
                 //to calculate remainder using X-OR
                 for(; frameData.length()>3 ;){
                         data = frameData.substring(0,4);
+                        System.out.println(frameData);
                         rem = xor(data , generatingFunction);
                         frameData = rem + frameData.substring(4);       
                 }

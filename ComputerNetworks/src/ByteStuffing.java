@@ -44,11 +44,13 @@ public class ByteStuffing {
         public static String receiverByteStuff(String sentString)
 	{
 		sentString = sentString.substring(1, sentString.length()-1);
+                //System.out.print(sentString);
 		sentString = sentString.replaceAll("\\$\\$", "\\$");
 		List<ByteStuffing> frameList = new ArrayList<ByteStuffing>();
 		while(sentString.contains("##"))
 		{
 			String frameString = sentString.substring(0, sentString.indexOf("##"));
+                        System.out.println(frameString);
 			frameString = frameString.replaceAll("\\$#", "#");
 			ByteStuffing frame = new ByteStuffing(frameString);
 			frameList.add(frame);
